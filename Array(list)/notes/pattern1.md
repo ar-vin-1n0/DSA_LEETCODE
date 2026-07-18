@@ -49,4 +49,95 @@ print(maximum)
 
 
 
+# NESTED TRAVERSAL
+
+Now instead of one loop,
+
+we have a loop inside another loop.
+
+for i in range(n):
+
+    for j in range(n):
+
+
+
+First element
+
+↓
+
+check everything
+
+Second element
+
+↓
+
+check everything
+
+Third element
+
+↓
+
+check everything    
+
+# EG
+nums = [2,4,6]
+
+Pairs
+
+2 4
+
+2 6
+
+4 6
+
+Code
+
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        print(nums[i], nums[j])
+
+Output
+
+2 4
+
+2 6
+
+4 6
+
+
+# TIME COMPLEXITY - O(n^2)
+
+
+
+# In-Place Modification
+
+Instead of creating another array,
+modify the original one
+
+Original
+
+[1,2,3]
+
+Multiply every element by 2.
+
+Instead of
+
+new = []
+
+for num in nums:
+    new.append(num*2)
+
+Do
+
+for i in range(len(nums)):
+    nums[i] *= 2
+
+Creating another array
+Extra memory
+O(n)
+
+Modifying original
+Extra memory
+O(1)    
+
 
